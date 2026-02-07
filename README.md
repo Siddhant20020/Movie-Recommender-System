@@ -1,16 +1,45 @@
-# Content-Based Movie Recommender System
+# 🎬 Movie Recommender System
 
-This project is a **content-based movie recommender system** built using the [MovieLens 100k dataset](https://grouplens.org/datasets/movielens/100k/). The system suggests movies similar to a user-selected movie based on content features.
+A **Movie Recommender System** built with **Streamlit** and **Python**, using content-based filtering with movie similarity and TMDB API for posters. Users can search movies, filter by genre, view details, and get recommendations.
+
+---
 
 ## Features
 
-- Utilizes **CountVectorizer** to vectorize movie features (genres, tags, etc.).
-- Calculates **cosine similarity** to find movies similar to the input movie.
-- Provides **personalized recommendations** for users.
-- Deployed as an **interactive Streamlit app** for easy evaluation and user interaction.
+- Search movies by **title**.
+- Filter movies by **genre**.
+- View detailed movie information:
+  - Poster
+  - Overview
+  - Genres
+  - Cast
+  - Director
+  - Popularity score
+- Get **recommended movies** based on similarity.
+- Click on any recommended movie to view its details immediately.
+- Sidebar is hidden after search for clean UI.
+- Supports showing multiple search results if more than one movie matches.
 
-## Dataset
+---
 
-- **MovieLens 100k**: 100,000 ratings from 943 users on 1,682 movies.
-- Features used: movie titles, genres, and user ratings.
 
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/Movie-Recommender-System.git
+cd Movie-Recommender-System
+
+
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Mac/Linux
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+# .streamlit/secrets.toml
+TMDB_API_KEY = "your_tmdb_api_key_here"
